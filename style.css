@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    padding: 20px;
+    background: -webkit-linear-gradient(left, #084feb, #0cb3e6);
+}
+.wrapper{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .card{
+    width: calc(33% - 20px);
+    background: #fff;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.wrapper .card .circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border: 8px solid #0cb3e6;
+    border-radius: 50%;
+}
+
+.card .circle .box,
+.card .circle .box span{
+position: absolute;
+top: 50%;
+left: 50%;
+transition: all 0.1s;
+}
+
+.card .circle .box{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.card .circle:hover .box span{
+    transform: translate(-45%, -50%) scale(1.09);
+}
+
+.card .circle .box span,
+.wrapper .card .text{
+    transform: translate(-50%, -50%);
+    background: -webkit-linear-gradient(left, #084feb, #0cb3e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card .circle .box span{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: sans-serif;
+    transform: translate(-45%, -50%);
+}
+
+.card .text{
+    font-size: 20px;
+    font-weight: 500;
+}
